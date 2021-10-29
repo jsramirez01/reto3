@@ -1,4 +1,4 @@
-package reto3.appi;
+package reto3.appi.Model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

@@ -1,9 +1,11 @@
-package reto3.appi;
+package reto3.appi.Web;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import reto3.appi.Model.Categoria;
+import reto3.appi.Services.servicioCategoria;
 
 import java.util.List;
 import java.util.Optional;

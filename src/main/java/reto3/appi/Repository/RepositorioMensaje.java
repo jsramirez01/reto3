@@ -1,7 +1,9 @@
-package reto3.appi;
+package reto3.appi.Repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import reto3.appi.Repository.Crud.InterfaceMensaje;
+import reto3.appi.Model.Mensaje;
 
 import java.util.List;
 import java.util.Optional;

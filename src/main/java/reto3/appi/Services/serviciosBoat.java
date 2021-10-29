@@ -1,7 +1,9 @@
-package reto3.appi;
+package reto3.appi.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import reto3.appi.Model.Boat;
+import reto3.appi.Repository.RepositorioBoat;
 
 import java.util.List;
 import java.util.Optional;

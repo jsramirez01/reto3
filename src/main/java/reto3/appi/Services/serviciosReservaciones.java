@@ -1,7 +1,9 @@
-package reto3.appi;
+package reto3.appi.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import reto3.appi.Model.Reservaciones;
+import reto3.appi.Repository.RepositirioReservaciones;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,7 +11,7 @@ import java.util.Optional;
 @Service
 public class serviciosReservaciones {
     @Autowired
-    private  RepositirioReservaciones metodoCrud;
+    private RepositirioReservaciones metodoCrud;
 
     public List<Reservaciones> getAll(){
         return metodoCrud.getAll();

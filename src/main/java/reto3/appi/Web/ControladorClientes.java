@@ -1,47 +1,46 @@
-package reto3.appi;
+package reto3.appi.Web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import reto3.appi.Model.Cliente;
+import reto3.appi.Services.ServiciosClientes;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/Message")
+@RequestMapping("/api/Client")
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 
-public class ControladorMensaje {
+public class ControladorClientes {
     @Autowired
-    private ServicioMensaje servicio;
+    private ServiciosClientes servicio;
     @GetMapping("/all")
-    public List<Mensaje> getMessages(){
+    public List<Cliente> getClients(){
         return servicio.getAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<Mensaje> getMessage(@PathVariable("id") int messageId){
-        return servicio.getMessage(messageId);
+    public Optional<Cliente> getClient(@PathVariable("id") int clientId){
+        return servicio.getClient(clientId);
     }
 
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public Mensaje save(@RequestBody Mensaje message){
-
-        return servicio.save(message);
+    public Cliente save(@RequestBody Cliente client){
+        return servicio.save(client);
     }
 
     @PostMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
-    public Mensaje update(@RequestBody Mensaje message){
-
-        return servicio.update(message);
+    public Cliente update(@RequestBody Cliente client){
+        return servicio.update(client);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id") int messageId){
-
-        return servicio.deleteMessage(messageId);
+    public boolean delete(@PathVariable("id") int clientId){
+        return servicio.deleteClient(clientId);
     }
 }
