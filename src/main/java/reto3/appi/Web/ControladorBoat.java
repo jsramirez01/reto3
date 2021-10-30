@@ -12,7 +12,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/Boat")
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
-public class ControladorBike {
+public class ControladorBoat {
     @Autowired
     private serviciosBoat servicio;
     @GetMapping("/all")
