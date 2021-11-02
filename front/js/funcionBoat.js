@@ -1,6 +1,6 @@
 funtion traerInformacionBoat(){
     $.ajax({
-        url:"http://localhost:8080/api/Boat/all",
+        url:"http://152.67.41.215:8080/api/Boat/all",
         type:"GET",
         datatype:"JSON",
         success:funtion(resouesta){
@@ -38,7 +38,7 @@ funtion guardarBoat(){
         datatype: 'JSON',
         data: JSON.stringfy(var3),
 
-        url:"http://localhost:8080/api/Boat/save",
+        url:"http://152.67.41.215:8080/api/Boat/save",
 
         success:function(response){
                     console.log(response);

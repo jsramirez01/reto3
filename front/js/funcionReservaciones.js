@@ -1,6 +1,6 @@
 funtion traerInformacionReservacionre(){
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/all",
+        url:"http://152.67.41.215:8080/api/Reservation/all",
         type:"GET",
         datatype:"JSON",
         success:funtion(resouesta){
@@ -34,7 +34,7 @@ funtion guardarResevaciones(){
         datatype: 'JSON',
         data: JSON.stringfy(var6),
 
-        url:"http://localhost:8080/api/Reservation/save",
+        url:"http://152.67.41.215:8080/api/Reservation/save",
 
         success:function(response){
                     console.log(response);
