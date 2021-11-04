@@ -22,11 +22,11 @@ public class serviciosReservaciones {
     }
 
     public Reservaciones save(Reservaciones resevation){
-        if (resevation.getIdReservations()==null){
+        if (resevation.getIdReservation()==null){
             return metodoCrud.save(resevation);
         }
         else {
-            Optional<Reservaciones> e = metodoCrud.getReservation(resevation.getIdReservations());
+            Optional<Reservaciones> e = metodoCrud.getReservation(resevation.getIdReservation());
             if (e.isEmpty()){
                 return metodoCrud.save(resevation);
             }
@@ -38,8 +38,8 @@ public class serviciosReservaciones {
 
     //pasar una capa de seguridad
     public Reservaciones update(Reservaciones reservation){
-        if (reservation.getIdReservations()!=null){
-            Optional<Reservaciones> e= metodoCrud.getReservation(reservation.getIdReservations());
+        if (reservation.getIdReservation()!=null){
+            Optional<Reservaciones> e= metodoCrud.getReservation(reservation.getIdReservation());
             if (!e.isEmpty()){
                 if (reservation.getStartDate()!=null){
                     e.get().setStartDate(reservation.getStartDate());
