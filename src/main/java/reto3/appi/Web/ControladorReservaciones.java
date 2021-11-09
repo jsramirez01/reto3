@@ -33,7 +33,7 @@ public class ControladorReservaciones {
         return servicio.save(reservation);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public Reservaciones update(@RequestBody Reservaciones reservation){
 

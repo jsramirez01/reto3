@@ -33,7 +33,7 @@ public class ControladorCategoria {
        return servicio.save(categoria);
    }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public Categoria update(@RequestBody Categoria categoria){
         return servicio.update(categoria);

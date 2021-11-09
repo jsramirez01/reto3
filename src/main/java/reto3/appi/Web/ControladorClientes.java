@@ -32,7 +32,7 @@ public class ControladorClientes {
         return servicio.save(client);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public Cliente update(@RequestBody Cliente client){
         return servicio.update(client);

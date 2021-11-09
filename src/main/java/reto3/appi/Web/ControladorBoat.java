@@ -31,7 +31,7 @@ public class ControladorBoat {
         return servicio.save(boat);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public Boat update(@RequestBody Boat boat){
         return servicio.update(boat);
