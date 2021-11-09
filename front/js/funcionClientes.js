@@ -1,6 +1,6 @@
 funtion traerInformacionClientes(){
     $.ajax({
-        url:"http://152.67.41.215:8080/api/Client/all",
+        url:"http://132.226.165.128:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:funtion(resouesta){
