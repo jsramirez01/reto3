@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import reto3.appi.Model.Reservaciones;
+import reto3.appi.Reportes.ContadorClientes;
+import reto3.appi.Reportes.StatusReservas;
 import reto3.appi.Services.serviciosReservaciones;
 
 import java.util.List;
@@ -46,4 +48,21 @@ public class ControladorReservaciones {
 
         return servicio.deleteReservation(reservationId);
     }
+    //pasar a pilar se revisa el estado de la reservacion
+    @GetMapping("/report-status")
+    public StatusReservas getReservas(){
+        return servicio.getReporteStatusReservaciones();
+    }
+
+    @GetMapping("/report-dates/{dateOne}/{dateTwo}")
+    public List<Reservaciones> getReservasTiempo (@PathVariable("dateOne")String dateOne, @PathVariable("dateTwo")String dateTwo){
+        return servicio.getReportesTiempoReservaciones(dateOne, dateTwo);
+    }
+
+    @GetMapping("/report-clients")
+    public List<ContadorClientes> getClientes(){
+        return servicio.servicioTopClientes();
+
+    }
+
 }
